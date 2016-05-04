@@ -10,18 +10,20 @@
   <!-- Vendor CSS - purecss.io -->
   <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
   <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
+  <link rel="stylesheet" href="styles.css">
   <!-- animate.css -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css">
   <!-- google fonts -->
   <link href="http://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet" type="text/css">
 
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="styles.css">
   <!-- javascript and jquery are at the bottom, before the </body> tag -->
 </head>
 <body>
+  <div id="searchhead">
   <header>
-    <h1>Movie Search</h1>
+    <h1>Pick-a-Flic</h1>
   </header>
   <div class="my-container">
     <div class="pure-g">
@@ -30,19 +32,71 @@
         <section class="search-area">
           <div class="pure-form">
             <input type="text" class="search-box" placeholder="Search">
-            <button class="pure-button pure-button-warning search-button">Sign in</button>
+            <button class="pure-button pure-button-warning search-button">Find Me a Flic</button>
           </div>
         </section>
+      </div>
         <section class="results-area">
-          <h2>Results</h2>
+          <h2></h2>
         </section>
       </div>
-      <!-- sidebar area -->
-      <div class="pure-u-1-3">
-        <p>This is the sidebar</p>
-      </div>
     </div>
-  </div>
+
+<p id="p1">Suggestions!</p>
+    <!-- 3d cubes -->
+<div class="1cube">
+        <input type="radio" checked id="radio-front" name="select-face"/>
+        <input type="radio" id="radio-left" name="select-face"/>
+        <input type="radio" id="radio-right" name="select-face"/>
+        <input type="radio" id="radio-top" name="select-face"/>
+        <input type="radio" id="radio-bottom" name="select-face"/>
+        <input type="radio" id="radio-back" name="select-face"/>
+
+    <div class="separator"></div>
+
+
+    <div class="space3d">
+
+        <div class="_3dbox starwars">
+          <div class="_3dface _3dface--front"></div>
+          <div class="_3dface _3dface--top"></div>
+          <div class="_3dface _3dface--bottom"></div>
+          <div class="_3dface _3dface--left"></div>
+          <div class="_3dface _3dface--right"></div>
+          <div class="_3dface _3dface--back"></div>
+        </div>
+</div>
+<p id="spaceP"></p>
+
+
+<div class="2cube">
+    </div>
+    <input type="radio" checked id="radio-front" name="select-face"/>
+    <input type="radio" id="radio-left" name="select-face"/>
+    <input type="radio" id="radio-right" name="select-face"/>
+    <input type="radio" id="radio-top" name="select-face"/>
+    <input type="radio" id="radio-bottom" name="select-face"/>
+    <input type="radio" id="radio-back" name="select-face"/>
+
+<div class="separator"></div>
+
+
+<div class="space3d">
+
+    <div class="_3dbox hunger">
+      <div class="_3dface _3dface--front"></div>
+      <div class="_3dface _3dface--top"></div>
+      <div class="_3dface _3dface--bottom"></div>
+      <div class="_3dface _3dface--left"></div>
+      <div class="_3dface _3dface--right"></div>
+      <div class="_3dface _3dface--back"></div>
+    </div>
+
+</div>
+</div>
+    <!-- end cube -->
+      <!-- sidebar area -->
+
 
 
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>

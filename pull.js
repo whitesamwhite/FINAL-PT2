@@ -1,7 +1,7 @@
 (function ($) {
 // ALL YOUR CODE GOES AFTER THIS LINE!  Don't delete the very final line, though!
-
-
+  makeCube();
+  make2Cube();
   // First step - listen for when the Search Button (indicated by the class 'search-button') is clicked
   $('.search-button').click(function(){
 
@@ -39,6 +39,64 @@ function runSearch(usertext){
       $('.results-area').append('<p>' + "<img src=" + movie.Poster + ">" + '</p>');
       $('.results-area').append('<a href="http://www.imdb.com/title/' + movie.imdbDB + '">IMBD</a>');
       $('.results-area').append('</div>');
+    });
+  });
+}
+
+
+function makeCube(){
+
+  $.getJSON("http://www.omdbapi.com/?s=Star&20Wars&r=json", function (data) {
+    $.each(data.Search, function(counter, movie) {
+      //document.write(movie.Title);
+
+      if(counter == 0){
+        $('.starwars ._3dface--front').css('background','url(' + movie.Poster +')');
+      }
+      if(counter == 1){
+        $('.starwars ._3dface--top').css('background','url(' + movie.Poster +')');
+      }
+      if(counter == 6){
+        $('.starwars ._3dface--bottom').css('background','url(' + movie.Poster +')');
+      }
+      if(counter == 3){
+        $('.starwars ._3dface--left').css('background','url(' + movie.Poster +')');
+      }
+      if(counter == 4){
+        $('.starwars ._3dface--right').css('background-image','url(' + movie.Poster +')');
+      }
+      if(counter == 5){
+        $('.starwars ._3dface--back').css('background','url(' + movie.Poster +')');
+      }
+
+    });
+  });
+}
+function make2Cube(){
+
+  $.getJSON("http://www.omdbapi.com/?s=Hunger&20Games&r=json", function (data) {
+    $.each(data.Search, function(counter, movie) {
+      //document.write(movie.Title);
+
+      if(counter == 0){
+        $('.hunger ._3dface--front').css('background','url(' + movie.Poster +')');
+      }
+      if(counter == 1){
+        $('.hunger ._3dface--top').css('background','url(' + movie.Poster +')');
+      }
+      if(counter == 6){
+        $('.hunger ._3dface--bottom').css('background','url(' + movie.Poster +')');
+      }
+      if(counter == 3){
+        $('.hunger ._3dface--left').css('background','url(' + movie.Poster +')');
+      }
+      if(counter == 4){
+        $('.hunger ._3dface--right').css('background-image','url(' + movie.Poster +')');
+      }
+      if(counter == 5){
+        $('.hunger ._3dface--back').css('background','url(' + movie.Poster +')');
+      }
+
     });
   });
 }
